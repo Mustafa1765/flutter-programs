@@ -6,10 +6,11 @@ void main() => runApp(const MaterialApp(
 
 class MyStatelessWidget extends StatelessWidget {
   const MyStatelessWidget({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
- 
+    return Scaffold(
+      appBar: AppBar(
         title: const Text('StatelessWidget'),
       ),
       body: const Center(
