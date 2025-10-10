@@ -14,6 +14,8 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  @override
+  Widget build(BuildContext context) {
     return const MaterialApp(home: CounterPage());
   }
 }
@@ -49,5 +51,16 @@ class CounterPage extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
     );
+  }
+}
+
+class CounterModel extends ChangeNotifier {
+  int _counter = 0;
+
+  int get counter => _counter;
+
+  void increment() {
+    _counter++;
+    notifyListeners();
   }
 }
