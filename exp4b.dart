@@ -34,21 +34,24 @@ class HomeScreen extends StatelessWidget {
           },
           child: const Text('Go to Second Screen'),
         ),
+      ),
+    );
+  }
+}
 
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({super.key});
 
- 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.pink,
       appBar: AppBar(title: const Text('Second Screen')),
       body: Center(
         child: ElevatedButton(
-      
-          },
           child: const Text('Go Back'),
+          onPressed: () => Navigator.pop(context),
         ),
       ),
     );
